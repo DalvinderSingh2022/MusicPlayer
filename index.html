@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0606937758.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- home -->
+        <div class="flex">
+            <span class="material-icons search-btn pointer" title="search">search</span>
+            <span>Now Playing</span>
+            <div class="top flex">
+                <span class="material-icons mute pointer" title="mute">volume_up</span>
+                <div class="vol-box vol progress pointer">
+                    <div class="vol progress-bar"></div>
+                </div>
+                <span class="vol percent"></span>
+            </div>
+        </div>
+
+        <div class="img-area">
+            <img />
+            <a target="_blank" class=" pointer">Play Video</a>
+        </div>
+
+        <div class="details">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+
+        <div class="progress audio pointer">
+            <div class="progress-bar audio">
+                <audio id="main-audio"></audio>
+            </div>
+            <div class="timer flex">
+                <span class="current-time">-:--</span>
+                <span class="duration">-:--</span>
+            </div>
+        </div>
+
+        <div class="controls flex">
+            <i id="repeat-list" class="material-icons pointer" title="playlist loop">repeat</i>
+            <i id="prev" class="material-icons pointer" title="previous">skip_previous</i>
+            <div class="play-pause pointer">
+                <i class="material-icons pointer" title="play">play_arrow</i>
+            </div>
+            <i id="next" class="material-icons pointer" title="next">skip_next</i>
+            <i id="more" class="material-icons pointer" title="queue">queue_music</i>
+        </div>
+
+        <div class="queue">
+            <div class="header flex">
+                <span>Queue</span>
+                <i id="close" class="material-icons pointer" title="close">close</i>
+            </div>
+            <ul></ul>
+        </div>
+
+        <!-- search -->
+        <div class="search popup flex column hide">
+            <div class="top-bar flex sticky">
+                <input type="text" class="search-field" placeholder="search">
+                <i id="close-search" class="material-icons pointer" title="close">close</i>
+            </div>
+            <ul class="grid"></ul>
+        </div>
+
+        <!-- discography -->
+        <div class="discography popup flex column hide">
+            <div class="sticky">
+                <div class="top-bar flex">
+                    <span>Discography</span>
+                    <i id="close-dis" class="material-icons pointer" title="close">close</i>
+                </div>
+
+                <div class="img-area"><img /></div>
+
+                <div class="flex column">
+                    <p class="artist name"></p>
+                    <div class="flex">
+                        <a class="instagram social" target="_blank"><i class="fa-brands fa-instagram pointer"></i></a>
+                        <a class="spotify social" target="_blank"><i class="fa-brands fa-spotify pointer"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="queue">
+                <div class="header flex">
+                    <span>Queue</span>
+                </div>
+                <ul class="grid"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
